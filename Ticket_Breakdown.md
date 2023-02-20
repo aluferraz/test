@@ -134,6 +134,6 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
     4.4 Check for PDF layout breaks.
 
-    4.5 If using Javascript directly instead of using typescript, include unit tests for common pitfalls if they do not exist: null, wrong types, undefined types, negative values, array instead of objects, objects instead of arrays.
+    4.5 If using Javascript directly instead of using typescript, include unit tests for common pitfalls: null, wrong types, undefined types, negative values, array instead of objects, objects instead of arrays.
 
     
