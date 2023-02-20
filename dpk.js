@@ -1,6 +1,6 @@
 const crypto = require("crypto");
-/*
-exports.deterministicPartitionKey = (event) => {
+
+function legacyDeterministicPartitionKey(event) {
   const TRIVIAL_PARTITION_KEY = "0";
   const MAX_PARTITION_KEY_LENGTH = 256;
   let candidate;
@@ -28,8 +28,6 @@ exports.deterministicPartitionKey = (event) => {
 };
 
 
-*/
-
 
 const TRIVIAL_PARTITION_KEY = "0";
 const MAX_PARTITION_KEY_LENGTH = 256;
@@ -45,7 +43,7 @@ function getCandidate(event) {
       //If the provided partitionKey is too big
       candidate = event.partitionKey;
     } else {
-      candidate = JSON.stringify(event);
+      candidate = hashPartitionKey(JSON.stringify(event));
     }
   }
   return getPartitionKey(candidate);
@@ -65,5 +63,6 @@ function hashPartitionKey(partitionKey) {
   return crypto.createHash("sha3-512").update(partitionKey).digest("hex");
 }
 exports.deterministicPartitionKey = deterministicPartitionKey;
+exports.legacyDeterministicPartitionKey = legacyDeterministicPartitionKey;
 exports.TRIVIAL_PARTITION_KEY = TRIVIAL_PARTITION_KEY;
 exports.MAX_PARTITION_KEY_LENGTH = MAX_PARTITION_KEY_LENGTH;
