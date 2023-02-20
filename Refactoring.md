@@ -10,10 +10,8 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 
 ## Your Explanation Here
 
-Split the code functionalities into functions to make it more readable and reusable.
-
-Add some comments to make it more easy to understand
-
-Used proper namming for each step
-
-Added unit tests covering major scenarios.
+1.Split the code functionalities into functions to make it more readable and reusable.
+2.Add some comments to make it more easy to understand
+3.Used proper namming for each step
+4.Added unit tests covering major scenarios.
+5.Added unit tests comparing refactored function and legacy function to ensure functionality [Can be removed after stable deploy]
