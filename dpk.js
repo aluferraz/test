@@ -53,14 +53,15 @@ function getCandidate(event) {
       candidate = hashPartitionKey(data);
     }
   }
-  if (typeof candidate !== "string") {
-    candidate = JSON.stringify(candidate);
-  }
+
 
   return candidate;
 }
 
 function hashPartitionKey(partitionKey) {
+  if (typeof candidate !== "string") {
+    partitionKey = JSON.stringify(partitionKey);
+  }
   return crypto.createHash("sha3-512").update(partitionKey).digest("hex");
 }
 
