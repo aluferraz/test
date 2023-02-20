@@ -13,9 +13,9 @@ describe("deterministicPartitionKey", () => {
   
   it("Returns the trucated parition key", () => {
     let key=  "";
-    for(let i =0 ; i < 280; i++){
+    for(let i =0 ; i < deterministicPartitionKey.MAX_PARTITION_KEY_LENGTH+1; i++){
       key +-i;
     }
-    expect(key).length.toBe(256);
+    expect(key).length.toBe(deterministicPartitionKey.MAX_PARTITION_KEY_LENGTH);
   });
 });

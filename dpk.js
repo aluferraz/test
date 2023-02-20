@@ -67,3 +67,4 @@ function hashPartitionKey(partitionKey) {
 
 exports.deterministicPartitionKey = deterministicPartitionKey;
 exports.TRIVIAL_PARTITION_KEY = TRIVIAL_PARTITION_KEY;
+exports.MAX_PARTITION_KEY_LENGTH = MAX_PARTITION_KEY_LENGTH;
