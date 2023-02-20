@@ -97,7 +97,7 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
 > Note 1: Assuming that system already uses a framework to run database queries safely (SQL Injection preventions, escaping, etc.)
 
-> Note 2: Assuming that can use TypeScript to make code strongly typed, which improves security and avoids the need for custom type-validating code. TypeScript is transpiled to JavaScript during build
+> Note 2: Assuming that can use TypeScript to make code strongly typed, which improves security and avoids the need for custom type-validating code. TypeScript is transpiled to JavaScript during build.
 
 3. **Create new REST endpoint**
 
@@ -133,5 +133,7 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
     4.3 Call createFacilityAgent with an non-exiting AgentId, non-exiting facilityId, and new VALID FacilityAgentId. Expected: FAIL
 
     4.4 Check for PDF layout breaks.
+
+    4.5 If using Javascript directly instead of using typescript, include unit tests for common pitfalls if they do not exist: null, wrong types, undefined types, negative values, array instead of objects, objects instead of arrays.
 
     
